@@ -8,6 +8,7 @@ const generateTarget = () => {
   return Math.floor(Math.random() * 10);
 }
 
+// Get absolute distance between human or compter guesses and the magic number
 const getAbsoluteDistance = (input, magic) => {
   return Math.abs(input - magic);
 }
@@ -31,6 +32,7 @@ const compareGuesses = (user, computer, magic) => {
   }
 }
 
+// Increment the score by 1 depending on who won
 const updateScore = winner => {
   switch(winner) {
     case 'human':
@@ -42,6 +44,7 @@ const updateScore = winner => {
   }
 }
 
+// Increment round number by one
 const advanceRound = () => {
   currentRoundNumber++;
 }
